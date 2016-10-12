@@ -8,3 +8,8 @@ install.packages("shiny")
 install.packages("gplots")
 ```
 
+To run the app,run the following line of code in R:
+
+```
+shiny::runGitHub("josefinacmenendez/Datatube_Heatmap")
+```
