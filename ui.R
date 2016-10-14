@@ -15,7 +15,7 @@ shinyUI(fluidPage(
       selectizeInput("contigs", "chooce up to 20 contigs", 
                      multiple = TRUE, 
                      choices = contigs, #need to be able to parse the entire list without crashing
-                     options=list(maxItems=20, maxChoices = 1000))
+                     options=list(maxItems=20, maxOptions = 5))
                 ),
     mainPanel(
       textOutput("contig"),
