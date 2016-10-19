@@ -3,10 +3,10 @@ shinyUI(fluidPage(
   titlePanel("Select Contigs"),
   sidebarLayout(
     sidebarPanel(
-      selectizeInput("contigs", "contigs 1 - 1001", 
+      selectizeInput("contigs", "Choose up to 50 contigs", 
                      multiple = TRUE, 
-                     choices = contigs[1:1000], #need to be able to parse the entire list without crashing
-                     options=list(maxItems=20))
+                     choices = contigs, #All items are available; the list displays items 1 - 1001, but the user can input a name that is not shown
+                     options=list(maxItems=50))
                  ),              
     mainPanel(
       textOutput("contig"),
