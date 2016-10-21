@@ -16,6 +16,8 @@ shiny::runGitHub("josefinacmenendez/Datatube_Heatmap")
 ```
 Another option is to run the app through shinyapps by clicking on the following link:
 
+This option is currently not working properly due to errors uploading the complete dataset.
+
 https://josefinacmenendez.shinyapps.io/Datatube_Heatmap/
 
 If disconnected from the server, simply hit the refresh button.
