@@ -6,7 +6,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectizeInput("contigs", 'choose up to 50 contigs',
                      multiple = TRUE,
-                     choices = contigs,
+                     choices = contigs[1:1000],
                      options=list(maxItems=50)), width = 2  
             ),
     
