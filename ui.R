@@ -1,7 +1,7 @@
 #ui.R
 
 shinyUI(fluidPage(
-  headerPanel("Select Contigs"),
+  headerPanel("Heatmap generator for differential expresion data"),
   sidebarLayout(
     sidebarPanel(
       selectizeInput("contigs", 'choose up to 50 contigs',
