@@ -1,15 +1,17 @@
 #ui.R
-
-shinyUI(fluidPage(
-  headerPanel("Heatmap generator for differential expresion data"),
+shinyUI(
+  
+  fluidPage(
+ 
+  titlePanel("Select Contigs"),
   sidebarLayout(
-    sidebarPanel(
-      selectizeInput("contigs", 'choose up to 50 contigs',
-                     multiple = TRUE,
-                     choices = contigs,
-                     options=list(maxItems=50)), width = 2  
-            ),
-    
+  
+      sidebarPanel(
+      selectizeInput("contigs", "Select up to 50 contigs", 
+                     choices = NULL, #need to be able to parse the entire list without crashing
+                     options=list(maxOptions = 100),
+                     multiple = TRUE)
+                 ),              
     mainPanel(
       plotOutput("histogram")
       )
