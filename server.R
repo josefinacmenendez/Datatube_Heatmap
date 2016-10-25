@@ -10,6 +10,9 @@ shinyServer(function(input,output,session){
   #output$contig <- renderText(class(input$contigs))This is good for testing outputs
   output$histogram <- renderPlot({
     validate(need(length(input$contigs)>1,message = "Select at least 2 contigs and 20 contigs at most")) #input validation
-    heatmap.2(dge_pepino[c(input$contigs),], trace = "none", col = redblue(20)) #generate heatmap
-  })
+    heatmap.2(dge_pepino[c(input$contigs),], trace = "none", col = redblue(20),
+             cexCol = 2,
+             cexRow = 0.2 + 1/log10(length(input$contigs)),
+             margins = c(8,20))
+  }, height = 700, width = 1000)
 })
