@@ -17,7 +17,7 @@ shinyServer(function(input,output,session){
   #downloadHandler allows for downloading the plot
   output$dld <- downloadHandler(
     filename = function(){
-      paste("heatmap", Sys.Date(), "pdf", sep = ".")
+      paste("heatmap", Sys.Date(), sep = "")
     },
     content = function(file) {
       pdf(file, height = 7, width = 10)
