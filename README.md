@@ -16,8 +16,6 @@ shiny::runGitHub("josefinacmenendez/Datatube_Heatmap")
 ```
 Another option is to run the app through shinyapps by clicking on the following link:
 
-To access an item in the dataset that is not shown on the menu, type its name or part of its name and a list with matching items will be shown.
-
 https://josefinacmenendez.shinyapps.io/Datatube_Heatmap/
 
-If disconnected from the server, simply hit the refresh button.
+To access an item in the dataset that is not shown on the menu, type its name or part of its name and a list with matching items will be shown. If disconnected from the server, simply hit the refresh button.
