@@ -3,7 +3,6 @@
 library(shiny)
 library(gplots)
 library(functional)
-
 #read data files
 nvs2 <- read.csv("N_vs_day2_whole_list.csv")
 nvs12<- read.csv("N_vs_day12_whole_list.csv")
@@ -27,3 +26,12 @@ dge_pepino <- dge_pepino[apply(dge_pepino, 1, Compose(is.finite, all)), , drop=F
 #Create vector with contig names
 contigs <- row.names(dge_pepino)
 contigs <- as.vector(contigs)
+
+#function definitions
+#plotHist plots the histogram
+plotHist <- function(conts){
+  heatmap.2(dge_pepino[c(conts),], trace = "none", col = redblue(20),
+            cexCol = 2,
+            cexRow = 0.2 + 1/log10(length(conts)),
+            margins = c(8,20))
+}
