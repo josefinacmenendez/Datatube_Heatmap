@@ -1,6 +1,6 @@
 # Datatube_Heatmap
 A shiny app to view a heatmap of differential gene expression for a select number of contigs.
-The data was obtained from J García-Arrarás' research laboratory. The species is H. glaberrima.
+For the data, refer to the following paper: Mashanov, V. S., Zueva, O. R., & García-Arrarás, J. E. (2014). Transcriptomic changes during regeneration of the central nervous system in an echinoderm. BMC genomics, 15(1), 357. 
 
 The required packages can be installed as follows:
 
